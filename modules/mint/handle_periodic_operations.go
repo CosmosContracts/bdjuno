@@ -11,7 +11,7 @@ import (
 	"github.com/go-co-op/gocron"
 	"github.com/rs/zerolog/log"
 
-	minttypes "github.com/cosmos/cosmos-sdk/x/mint/types"
+	minttypes "github.com/CosmosContracts/juno/x/mint/types"
 )
 
 // RegisterPeriodicOps returns the AdditionalOperation that periodically runs fetches from
