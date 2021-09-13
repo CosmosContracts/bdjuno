@@ -129,4 +129,4 @@ replace google.golang.org/grpc => google.golang.org/grpc v1.33.2
 
 replace github.com/tendermint/tendermint => github.com/forbole/tendermint v0.34.13-0.20210820072129-a2a4af55563d
 
-// replace github.com/tendermint/spm => github.com/romelukaku/spm v0.1.4-0.20210804090337-ad6becab8819
+replace github.com/tendermint/spm => github.com/toschdev/spm v0.1.4
