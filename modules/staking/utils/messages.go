@@ -2,6 +2,7 @@ package utils
 
 import (
 	"context"
+	"fmt"
 	"time"
 
 	"github.com/desmos-labs/juno/client"
@@ -25,32 +26,27 @@ func StoreValidatorFromMsgCreateValidator(
 	var pubKey cryptotypes.PubKey
 	err := cdc.UnpackAny(msg.Pubkey, &pubKey)
 	if err != nil {
-		return err
+		return fmt.Errorf("error while unpacking pub key: %s", err)
 	}
 
 	operatorAddr, err := sdk.ValAddressFromBech32(msg.ValidatorAddress)
 	if err != nil {
-		return err
+		return fmt.Errorf("error while converting validator address from bech32: %s", err)
 	}
 
 	stakingValidator, err := stakingtypes.NewValidator(operatorAddr, pubKey, msg.Description)
 	if err != nil {
-		return err
+		return fmt.Errorf("error while creating validator: %s", err)
 	}
 
 	validator, err := ConvertValidator(cdc, stakingValidator, height)
 	if err != nil {
-		return err
+		return fmt.Errorf("error while converting validator: %s", err)
 	}
 
 	desc, err := ConvertValidatorDescription(msg.ValidatorAddress, msg.Description, height)
 	if err != nil {
-		return err
-	}
-
-	params, err := db.GetStakingParams()
-	if err != nil {
-		return err
+		return fmt.Errorf("error while converting validator description: %s", err)
 	}
 
 	// Save the validator
@@ -66,14 +62,25 @@ func StoreValidatorFromMsgCreateValidator(
 	}
 
 	// Save the first self-delegation
-	return db.SaveDelegations([]types.Delegation{
+	err = db.SaveDelegations([]types.Delegation{
 		types.NewDelegation(
 			msg.DelegatorAddress,
 			msg.ValidatorAddress,
-			sdk.NewCoin(params.BondDenom, msg.MinSelfDelegation),
+			msg.Value,
 			height,
 		),
 	})
+	if err != nil {
+		return err
+	}
+
+	// Save the commission
+	return db.SaveValidatorCommission(types.NewValidatorCommission(
+		msg.ValidatorAddress,
+		&msg.Commission.Rate,
+		&msg.MinSelfDelegation,
+		height,
+	))
 }
 
 // StoreDelegationFromMessage handles a MsgDelegate and saves the delegation inside the database
@@ -90,7 +97,7 @@ func StoreDelegationFromMessage(
 		header,
 	)
 	if err != nil {
-		return err
+		return fmt.Errorf("error while getting delegation: %s", err)
 	}
 
 	delegation := ConvertDelegationResponse(height, *res.DelegationResponse)
@@ -104,17 +111,17 @@ func StoreRedelegationFromMessage(
 ) (*types.Redelegation, error) {
 	event, err := tx.FindEventByType(index, stakingtypes.EventTypeRedelegate)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("error while searching for EventTypeRedelegate: %s", err)
 	}
 
 	completionTimeStr, err := tx.FindAttributeByKey(event, stakingtypes.AttributeKeyCompletionTime)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("error while searching for AttributeKeyCompletionTime: %s", err)
 	}
 
 	completionTime, err := time.Parse(time.RFC3339, completionTimeStr)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("error while covnerting redelegation completion time: %s", err)
 	}
 
 	redelegation := types.NewRedelegation(
@@ -136,17 +143,17 @@ func StoreUnbondingDelegationFromMessage(
 ) (*types.UnbondingDelegation, error) {
 	event, err := tx.FindEventByType(index, stakingtypes.EventTypeUnbond)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("error while searching for EventTypeUnbond: %s", err)
 	}
 
 	completionTimeStr, err := tx.FindAttributeByKey(event, stakingtypes.AttributeKeyCompletionTime)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("error while searching for AttributeKeyCompletionTime: %s", err)
 	}
 
 	completionTime, err := time.Parse(time.RFC3339, completionTimeStr)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("error while covnerting unbonding delegation completion time: %s", err)
 	}
 
 	delegation := types.NewUnbondingDelegation(

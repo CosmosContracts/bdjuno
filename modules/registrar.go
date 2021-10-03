@@ -90,13 +90,13 @@ func (r *Registrar) BuildModules(ctx registrar.Context) jmodules.Modules {
 		auth.NewModule(r.parser, authClient, encodingConfig, bigDipperBd),
 		bank.NewModule(r.parser, authClient, bankClient, encodingConfig, bigDipperBd),
 		consensus.NewModule(ctx.Proxy, bigDipperBd),
-		distribution.NewModule(distrClient, bigDipperBd),
+		distribution.NewModule(bdjunoCfg, bankClient, distrClient, bigDipperBd),
 		gov.NewModule(bankClient, govClient, stakingClient, encodingConfig, bigDipperBd),
 		mint.NewModule(mintClient, bigDipperBd),
 		modules.NewModule(ctx.ParsingConfig, bigDipperBd),
 		pricefeed.NewModule(bdjunoCfg, encodingConfig, bigDipperBd),
 		slashing.NewModule(slashingClient, bigDipperBd),
-		staking.NewModule(ctx.ParsingConfig, bankClient, stakingClient, encodingConfig, bigDipperBd),
+		staking.NewModule(ctx.ParsingConfig, bankClient, stakingClient, distrClient, encodingConfig, bigDipperBd),
 		history.NewModule(r.parser, encodingConfig, bigDipperBd),
 	}
 }

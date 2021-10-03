@@ -25,12 +25,17 @@ func StoreTokens(cfg *config.Config, db *database.Db) error {
 		// Save the coin as a token with its units
 		err := db.SaveToken(coin)
 		if err != nil {
-			return err
+			return fmt.Errorf("error while saving token: %s", err)
 		}
 
 		// Create the price entry
 		for _, unit := range coin.Units {
-			prices = append(prices, types.NewTokenPrice(unit.Denom, 0, 0, time.Now()))
+			// Skip units with empty price ids
+			if unit.PriceID == "" {
+				continue
+			}
+
+			prices = append(prices, types.NewTokenPrice(unit.Denom, 0, 0, time.Time{}))
 		}
 	}
 
