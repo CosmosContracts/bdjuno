@@ -3,7 +3,7 @@ module github.com/forbole/bdjuno
 go 1.17
 
 require (
-	github.com/CosmosContracts/juno v0.0.0-20210911173950-8e8bcdf08d91
+	github.com/CosmosContracts/juno v1.0.0
 	github.com/cosmos/cosmos-sdk v0.44.0
 	github.com/desmos-labs/juno v0.0.0-20210824054319-93b61f171e01
 	github.com/go-co-op/gocron v0.3.3
@@ -111,8 +111,8 @@ require (
 	github.com/zondax/hid v0.9.0 // indirect
 	go.etcd.io/bbolt v1.3.5 // indirect
 	golang.org/x/crypto v0.0.0-20201221181555-eec23a3978ad // indirect
-	golang.org/x/net v0.0.0-20210525063256-abc453219eb5 // indirect
-	golang.org/x/sys v0.0.0-20210630005230-0f9fa26af87c // indirect
+	golang.org/x/net v0.0.0-20210903162142-ad29c8ab022f // indirect
+	golang.org/x/sys v0.0.0-20210903071746-97244b99971b // indirect
 	golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1 // indirect
 	golang.org/x/text v0.3.6 // indirect
 	google.golang.org/genproto v0.0.0-20210617175327-b9e0b3197ced // indirect
@@ -123,10 +123,10 @@ require (
 	nhooyr.io/websocket v1.8.6 // indirect
 )
 
-replace github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
-
 replace google.golang.org/grpc => google.golang.org/grpc v1.33.2
 
-replace github.com/tendermint/tendermint => github.com/forbole/tendermint v0.34.13-0.20210820072129-a2a4af55563d
+replace github.com/tendermint/tendermint => github.com/tendermint/tendermint v0.34.13
 
-replace github.com/tendermint/spm => github.com/toschdev/spm v0.1.4
+replace github.com/tendermint/spm => github.com/faddat/spm v0.44.1
+
+replace github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
