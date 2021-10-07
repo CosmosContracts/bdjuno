@@ -12,6 +12,8 @@ import (
 
 	"github.com/forbole/bdjuno/database"
 	"github.com/forbole/bdjuno/modules"
+
+	junoapp "github.com/CosmosContracts/juno/app"
 )
 
 func main() {
@@ -38,6 +40,7 @@ func main() {
 func getBasicManagers() []module.BasicManager {
 	return []module.BasicManager{
 		simapp.ModuleBasics,
+		junoapp.ModuleBasics,
 		module.NewBasicManager(
 			ibc.AppModule{},
 		),

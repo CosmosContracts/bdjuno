@@ -3,7 +3,9 @@ module github.com/forbole/bdjuno
 go 1.15
 
 require (
+	github.com/CosmosContracts/juno v1.0.0
 	github.com/cosmos/cosmos-sdk v0.44.1
+	github.com/cosmos/ibc-go v1.2.1
 	github.com/desmos-labs/juno v0.0.0-20211005090705-514187767199
 	github.com/go-co-op/gocron v0.3.3
 	github.com/gogo/protobuf v1.3.3
@@ -20,6 +22,8 @@ require (
 
 replace google.golang.org/grpc => google.golang.org/grpc v1.33.2
 
-replace github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
+replace github.com/tendermint/tendermint => github.com/tendermint/tendermint v0.34.13
 
-replace github.com/tendermint/tendermint => github.com/forbole/tendermint v0.34.13-0.20211005074050-33591287eca5
+replace github.com/tendermint/spm => github.com/faddat/spm v0.44.1
+
+replace github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
