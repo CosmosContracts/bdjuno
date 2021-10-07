@@ -3,7 +3,8 @@ module github.com/forbole/bdjuno
 go 1.15
 
 require (
-	github.com/cosmos/cosmos-sdk v0.43.0
+	github.com/CosmosContracts/juno v1.0.0 // indirect
+	github.com/cosmos/cosmos-sdk v0.44.0
 	github.com/desmos-labs/juno v0.0.0-20210824054319-93b61f171e01
 	github.com/go-co-op/gocron v0.3.3
 	github.com/gogo/protobuf v1.3.3
