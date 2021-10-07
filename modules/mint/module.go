@@ -1,7 +1,7 @@
 package mint
 
 import (
-	minttypes "github.com/cosmos/cosmos-sdk/x/mint/types"
+	minttypes "github.com/CosmosContracts/juno/x/mint/types"
 	"github.com/desmos-labs/juno/modules"
 	juno "github.com/desmos-labs/juno/types"
 	"github.com/go-co-op/gocron"
