@@ -3,7 +3,6 @@ module github.com/forbole/bdjuno
 go 1.15
 
 require (
-	github.com/CosmosContracts/juno v1.0.0 // indirect
 	github.com/cosmos/cosmos-sdk v0.44.0
 	github.com/cosmos/ibc-go v1.1.0 // indirect
 	github.com/desmos-labs/juno v0.0.0-20210824054319-93b61f171e01
@@ -23,6 +22,7 @@ require (
 	google.golang.org/genproto v0.0.0-20210617175327-b9e0b3197ced // indirect
 	google.golang.org/grpc v1.40.0
 )
+
 replace google.golang.org/grpc => google.golang.org/grpc v1.33.2
 
 replace github.com/tendermint/tendermint => github.com/tendermint/tendermint v0.34.13
