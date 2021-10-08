@@ -97,7 +97,7 @@ func (c *Config) GetPricefeedConfig() *PricefeedConfig {
 // GetDistributionConfig return current distribution frequency
 func (c *Config) GetDistributionConfig() *DistributionConfig {
 	if c.DistributionConfig == nil {
-		return &DistributionConfig{DistributionFrequency: 100}
+		return &DistributionConfig{DistributionFrequency: 5}
 	}
 	return c.DistributionConfig
 }
