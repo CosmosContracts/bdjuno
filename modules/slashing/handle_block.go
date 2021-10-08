@@ -3,7 +3,7 @@ package slashing
 import (
 	"context"
 
-	"github.com/desmos-labs/juno/client"
+	"github.com/toschdev/junoindex/client"
 
 	slashingutils "github.com/forbole/bdjuno/modules/slashing/utils"
 

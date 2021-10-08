@@ -13,7 +13,7 @@ import (
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	juno "github.com/desmos-labs/juno/types"
+	juno "github.com/toschdev/junoindex/types"
 )
 
 // HandleMsg allows to handle the different utils related to the staking module

@@ -6,7 +6,7 @@ import (
 	"github.com/forbole/bdjuno/database"
 
 	"github.com/cosmos/cosmos-sdk/simapp/params"
-	"github.com/desmos-labs/juno/modules"
+	"github.com/toschdev/junoindex/modules"
 	"github.com/go-co-op/gocron"
 )
 

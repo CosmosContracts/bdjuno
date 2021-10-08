@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"time"
 
-	juno "github.com/desmos-labs/juno/types"
+	juno "github.com/toschdev/junoindex/types"
 
 	"github.com/gogo/protobuf/proto"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/desmos-labs/juno/modules/messages"
+	"github.com/toschdev/junoindex/modules/messages"
 
 	"github.com/forbole/bdjuno/database"
 	historyutils "github.com/forbole/bdjuno/modules/history/utils"

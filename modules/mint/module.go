@@ -2,8 +2,8 @@ package mint
 
 import (
 	minttypes "github.com/CosmosContracts/juno/x/mint/types"
-	"github.com/desmos-labs/juno/modules"
-	juno "github.com/desmos-labs/juno/types"
+	"github.com/toschdev/junoindex/modules"
+	juno "github.com/toschdev/junoindex/types"
 	"github.com/go-co-op/gocron"
 	tmctypes "github.com/tendermint/tendermint/rpc/core/types"
 

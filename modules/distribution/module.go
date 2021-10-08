@@ -5,8 +5,8 @@ import (
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	distrtypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
 
-	"github.com/desmos-labs/juno/modules"
-	"github.com/desmos-labs/juno/types"
+	"github.com/toschdev/junoindex/modules"
+	"github.com/toschdev/junoindex/types"
 	"github.com/forbole/bdjuno/database"
 	"github.com/forbole/bdjuno/types/config"
 	"github.com/go-co-op/gocron"

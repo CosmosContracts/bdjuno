@@ -5,8 +5,8 @@ import (
 
 	"github.com/forbole/bdjuno/database"
 
-	"github.com/desmos-labs/juno/modules"
-	"github.com/desmos-labs/juno/types"
+	"github.com/toschdev/junoindex/modules"
+	"github.com/toschdev/junoindex/types"
 	tmctypes "github.com/tendermint/tendermint/rpc/core/types"
 )
 

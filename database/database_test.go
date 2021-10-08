@@ -9,13 +9,13 @@ import (
 	"testing"
 	"time"
 
-	junodb "github.com/desmos-labs/juno/db"
-	"github.com/desmos-labs/juno/types/logging"
+	junodb "github.com/toschdev/junoindex/db"
+	"github.com/toschdev/junoindex/types/logging"
 
 	"github.com/forbole/bdjuno/database"
 	"github.com/forbole/bdjuno/types"
 
-	juno "github.com/desmos-labs/juno/types"
+	juno "github.com/toschdev/junoindex/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"

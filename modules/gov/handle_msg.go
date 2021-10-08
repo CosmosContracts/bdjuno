@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/desmos-labs/juno/client"
+	"github.com/toschdev/junoindex/client"
 
 	"github.com/forbole/bdjuno/database"
 	"github.com/forbole/bdjuno/types"
@@ -13,7 +13,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
-	juno "github.com/desmos-labs/juno/types"
+	juno "github.com/toschdev/junoindex/types"
 )
 
 // HandleMsg allows to handle the different utils related to the gov module

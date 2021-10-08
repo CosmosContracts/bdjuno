@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	juno "github.com/desmos-labs/juno/types"
+	juno "github.com/toschdev/junoindex/types"
 
 	historyutils "github.com/forbole/bdjuno/modules/history/utils"
 	"github.com/forbole/bdjuno/types"

@@ -12,10 +12,10 @@ import (
 	minttypes "github.com/CosmosContracts/juno/x/mint/types"
 	slashingtypes "github.com/cosmos/cosmos-sdk/x/slashing/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	"github.com/desmos-labs/juno/client"
-	jmodules "github.com/desmos-labs/juno/modules"
-	"github.com/desmos-labs/juno/modules/messages"
-	"github.com/desmos-labs/juno/modules/registrar"
+	"github.com/toschdev/junoindex/client"
+	jmodules "github.com/toschdev/junoindex/modules"
+	"github.com/toschdev/junoindex/modules/messages"
+	"github.com/toschdev/junoindex/modules/registrar"
 
 	"github.com/forbole/bdjuno/types/config"
 

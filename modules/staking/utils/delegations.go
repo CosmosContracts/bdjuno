@@ -10,7 +10,7 @@ import (
 
 	distrutils "github.com/forbole/bdjuno/modules/distribution/utils"
 
-	"github.com/desmos-labs/juno/client"
+	"github.com/toschdev/junoindex/client"
 
 	"github.com/cosmos/cosmos-sdk/types/query"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"

@@ -7,8 +7,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	distrtypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
-	"github.com/desmos-labs/juno/client"
-	juno "github.com/desmos-labs/juno/types"
+	"github.com/toschdev/junoindex/client"
+	juno "github.com/toschdev/junoindex/types"
 
 	bankutils "github.com/forbole/bdjuno/modules/bank/utils"
 

@@ -1,7 +1,7 @@
 package config
 
 import (
-	juno "github.com/desmos-labs/juno/types"
+	juno "github.com/toschdev/junoindex/types"
 	"github.com/pelletier/go-toml"
 
 	"github.com/forbole/bdjuno/types"
@@ -97,7 +97,7 @@ func (c *Config) GetPricefeedConfig() *PricefeedConfig {
 // GetDistributionConfig return current distribution frequency
 func (c *Config) GetDistributionConfig() *DistributionConfig {
 	if c.DistributionConfig == nil {
-		return &DistributionConfig{DistributionFrequency: 0}
+		return &DistributionConfig{DistributionFrequency: 1}
 	}
 	return c.DistributionConfig
 }

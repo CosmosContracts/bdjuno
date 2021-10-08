@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/desmos-labs/juno/client"
+	"github.com/toschdev/junoindex/client"
 
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	"github.com/rs/zerolog/log"

@@ -3,7 +3,7 @@ package auth
 import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/desmos-labs/juno/modules/messages"
+	"github.com/toschdev/junoindex/modules/messages"
 	"github.com/gogo/protobuf/proto"
 	"github.com/rs/zerolog/log"
 

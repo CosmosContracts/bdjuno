@@ -14,8 +14,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/simapp/params"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
-	"github.com/desmos-labs/juno/modules"
-	"github.com/desmos-labs/juno/types"
+	"github.com/toschdev/junoindex/modules"
+	"github.com/toschdev/junoindex/types"
 	tmtypes "github.com/tendermint/tendermint/types"
 )
 

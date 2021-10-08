@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/desmos-labs/juno/client"
+	"github.com/toschdev/junoindex/client"
 
 	"github.com/forbole/bdjuno/database"
 	"github.com/forbole/bdjuno/types"

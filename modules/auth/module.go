@@ -8,9 +8,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/simapp/params"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authttypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	"github.com/desmos-labs/juno/modules"
-	"github.com/desmos-labs/juno/modules/messages"
-	juno "github.com/desmos-labs/juno/types"
+	"github.com/toschdev/junoindex/modules"
+	"github.com/toschdev/junoindex/modules/messages"
+	juno "github.com/toschdev/junoindex/types"
 	tmtypes "github.com/tendermint/tendermint/types"
 )
 

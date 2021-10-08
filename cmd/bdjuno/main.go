@@ -4,9 +4,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/simapp"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	ibc "github.com/cosmos/ibc-go/modules/core"
-	"github.com/desmos-labs/juno/cmd"
-	parsecmd "github.com/desmos-labs/juno/cmd/parse"
-	"github.com/desmos-labs/juno/modules/messages"
+	"github.com/toschdev/junoindex/cmd"
+	parsecmd "github.com/toschdev/junoindex/cmd/parse"
+	"github.com/toschdev/junoindex/modules/messages"
 
 	"github.com/forbole/bdjuno/types/config"
 

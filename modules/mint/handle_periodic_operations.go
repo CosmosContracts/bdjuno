@@ -3,7 +3,7 @@ package mint
 import (
 	"context"
 
-	"github.com/desmos-labs/juno/client"
+	"github.com/toschdev/junoindex/client"
 
 	"github.com/forbole/bdjuno/database"
 	"github.com/forbole/bdjuno/modules/utils"

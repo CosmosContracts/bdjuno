@@ -1,8 +1,8 @@
 package modules
 
 import (
-	"github.com/desmos-labs/juno/modules"
-	juno "github.com/desmos-labs/juno/types"
+	"github.com/toschdev/junoindex/modules"
+	juno "github.com/toschdev/junoindex/types"
 
 	"github.com/forbole/bdjuno/database"
 )

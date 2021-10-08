@@ -3,7 +3,7 @@ package bank
 import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/desmos-labs/juno/modules/messages"
+	"github.com/toschdev/junoindex/modules/messages"
 	"github.com/gogo/protobuf/proto"
 	"github.com/rs/zerolog/log"
 
@@ -12,7 +12,7 @@ import (
 	"github.com/forbole/bdjuno/modules/utils"
 
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	juno "github.com/desmos-labs/juno/types"
+	juno "github.com/toschdev/junoindex/types"
 )
 
 // HandleMsg handles any message updating the involved addresses balances

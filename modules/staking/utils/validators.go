@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	juno "github.com/desmos-labs/juno/types"
+	juno "github.com/toschdev/junoindex/types"
 	tmctypes "github.com/tendermint/tendermint/rpc/core/types"
 
-	"github.com/desmos-labs/juno/client"
+	"github.com/toschdev/junoindex/client"
 
 	"github.com/forbole/bdjuno/database"
 	"github.com/forbole/bdjuno/modules/staking/keybase"
